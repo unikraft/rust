@@ -50,6 +50,7 @@ fn main() {
         // - nvptx64-nvidia-cuda
         // - arch=avr
         // - uefi (x86_64-unknown-uefi, i686-unknown-uefi)
+        // - unikraft (x86_64-unikraft)
         // - JSON targets
         // - Any new targets that have not been explicitly added above.
         println!("cargo:rustc-cfg=feature=\"restricted-std\"");

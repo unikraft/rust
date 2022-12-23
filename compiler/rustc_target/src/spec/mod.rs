@@ -83,6 +83,7 @@ mod solaris_base;
 mod solid_base;
 mod thumb_base;
 mod uefi_msvc_base;
+mod unikraft_base;
 mod vxworks_base;
 mod wasm_base;
 mod windows_gnu_base;
@@ -1291,6 +1292,8 @@ supported_targets! {
 
     ("aarch64-unknown-hermit", aarch64_unknown_hermit),
     ("x86_64-unknown-hermit", x86_64_unknown_hermit),
+
+    ("x86_64-unikraft", x86_64_unikraft),
 
     ("riscv32i-unknown-none-elf", riscv32i_unknown_none_elf),
     ("riscv32im-unknown-none-elf", riscv32im_unknown_none_elf),

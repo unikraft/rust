@@ -786,7 +786,7 @@ changelog-seen = 2
 #qemu-rootfs = <none> (path)
 
 # Skip building the `std` library for this target. Enabled by default for
-# target triples containing `-none`, `nvptx`, `switch`, or `-uefi`.
+# target triples containing `-none`, `nvptx`, `switch`, `-uefi`, or `-unikraft`.
 #no-std = <platform-specific> (bool)
 
 # =============================================================================
