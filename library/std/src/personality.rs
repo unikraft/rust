@@ -38,6 +38,7 @@ cfg_if::cfg_if! {
         // - family=wasm
         // - os=none ("bare metal" targets)
         // - os=uefi
+        // = os=unikraft
         // - os=espidf
         // - os=hermit
         // - nvptx64-nvidia-cuda
