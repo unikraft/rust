@@ -21,6 +21,7 @@ fn main() {
         || target.contains("fuchsia")
         || (target.contains("sgx") && target.contains("fortanix"))
         || target.contains("hermit")
+        || target.contains("unikraft")
         || target.contains("l4re")
         || target.contains("redox")
         || target.contains("haiku")
@@ -43,7 +44,6 @@ fn main() {
         // - arch=avr
         // - tvos (aarch64-apple-tvos, x86_64-apple-tvos)
         // - uefi (x86_64-unknown-uefi, i686-unknown-uefi)
-        // - unikraft (x86_64-unikraft)
         // - JSON targets
         // - Any new targets that have not been explicitly added above.
         println!("cargo:rustc-cfg=feature=\"restricted-std\"");
