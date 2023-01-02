@@ -5337,6 +5337,7 @@ dependencies = [
  "rand_xorshift",
  "rustc-demangle",
  "std_detect",
+ "unikraft-abi",
  "unwind",
  "wasi",
 ]
@@ -6051,6 +6052,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "496a3d395ed0c30f411ceace4a91f7d93b148fb5a9b383d5d4cff7850f048d5f"
 dependencies = [
  "diff",
+]
+
+[[package]]
+name = "unikraft-abi"
+version = "0.0.0"
+dependencies = [
+ "compiler_builtins",
+ "rustc-std-workspace-core",
 ]
 
 [[package]]
