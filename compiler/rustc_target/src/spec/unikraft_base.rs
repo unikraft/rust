@@ -1,4 +1,4 @@
-use crate::spec::{Cc, LinkerFlavor, Lld, PanicStrategy, RelocModel, TargetOptions, TlsModel};
+use crate::spec::{cvs, Cc, LinkerFlavor, Lld, PanicStrategy, RelocModel, TargetOptions, TlsModel};
 
 pub fn opts() -> TargetOptions {
     let linker_flavor = LinkerFlavor::Gnu(Cc::Yes, Lld::No);
@@ -22,7 +22,9 @@ pub fn opts() -> TargetOptions {
     );
 
     TargetOptions {
-        os: "unikraft".into(),
+        os: "linux".into(),
+        families: cvs!["unix"],
+        env: "musl".into(),
         linker_flavor,
         relocation_model: RelocModel::Static,
         tls_model: TlsModel::InitialExec,
