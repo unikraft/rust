@@ -140,6 +140,9 @@ pub mod solid;
 #[cfg(target_os = "tvos")]
 #[path = "ios/mod.rs"]
 pub(crate) mod tvos;
+#[cfg(target_os = "unikraft")]
+#[path = "linux/mod.rs"]
+pub mod unikraft;
 #[cfg(target_os = "vita")]
 pub mod vita;
 #[cfg(target_os = "vxworks")]
@@ -150,5 +153,5 @@ pub(crate) mod watchos;
 #[cfg(any(unix, target_os = "wasi", doc))]
 pub mod fd;
 
-#[cfg(any(target_os = "linux", target_os = "android", doc))]
+#[cfg(any(target_os = "linux", target_os = "android", target_os = "unikraft", doc))]
 mod net;

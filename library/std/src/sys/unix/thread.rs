@@ -130,7 +130,7 @@ impl Thread {
         }
     }
 
-    #[cfg(target_os = "linux")]
+    #[cfg(any(target_os = "linux", target_os = "unikraft"))]
     pub fn set_name(name: &CStr) {
         const TASK_COMM_LEN: usize = 16;
 
@@ -289,6 +289,7 @@ impl Drop for Thread {
     target_os = "ios",
     target_os = "tvos",
     target_os = "watchos",
+    target_os = "unikraft",
 ))]
 fn truncate_cstr<const MAX_WITH_NUL: usize>(cstr: &CStr) -> [libc::c_char; MAX_WITH_NUL] {
     let mut result = [0; MAX_WITH_NUL];
