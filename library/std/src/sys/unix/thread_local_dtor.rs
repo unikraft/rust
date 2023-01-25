@@ -15,7 +15,8 @@
     target_os = "linux",
     target_os = "fuchsia",
     target_os = "redox",
-    target_os = "emscripten"
+    target_os = "emscripten",
+    target_os = "unikraft",
 ))]
 #[cfg_attr(target_family = "wasm", allow(unused))] // might remain unused depending on target details (e.g. wasm32-unknown-emscripten)
 pub unsafe fn register_dtor(t: *mut u8, dtor: unsafe extern "C" fn(*mut u8)) {

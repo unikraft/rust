@@ -454,7 +454,6 @@ impl Target {
             || triple.contains("nvptx")
             || triple.contains("switch")
             || triple.contains("-uefi")
-            || triple.contains("-unikraft")
         {
             target.no_std = true;
         }

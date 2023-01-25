@@ -143,6 +143,8 @@ pub mod redox;
 pub mod solaris;
 #[cfg(target_os = "solid_asp3")]
 pub mod solid;
+#[cfg(target_os = "unikraft")]
+pub mod unikraft;
 #[cfg(target_os = "vxworks")]
 pub mod vxworks;
 #[cfg(target_os = "watchos")]
