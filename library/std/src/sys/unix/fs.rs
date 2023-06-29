@@ -96,11 +96,7 @@ use libc::{
     dirent as dirent64, fstat as fstat64, ftruncate as ftruncate64, lseek as lseek64,
     lstat as lstat64, off_t as off64_t, open as open64, stat as stat64,
 };
-#[cfg(any(
-    target_os = "linux",
-    target_os = "emscripten",
-    target_os = "l4re"
-))]
+#[cfg(any(target_os = "linux", target_os = "emscripten", target_os = "l4re"))]
 use libc::{dirent64, fstat64, ftruncate64, lseek64, lstat64, off64_t, open64, stat64};
 
 pub use crate::sys_common::fs::try_exists;

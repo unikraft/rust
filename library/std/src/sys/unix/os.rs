@@ -359,11 +359,7 @@ pub fn current_exe() -> io::Result<PathBuf> {
     }
 }
 
-#[cfg(any(
-    target_os = "linux",
-    target_os = "android",
-    target_os = "emscripten"
-))]
+#[cfg(any(target_os = "linux", target_os = "android", target_os = "emscripten"))]
 pub fn current_exe() -> io::Result<PathBuf> {
     match crate::fs::read_link("/proc/self/exe") {
         Err(ref e) if e.kind() == io::ErrorKind::NotFound => Err(io::const_io_error!(
