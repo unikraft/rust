@@ -2,7 +2,7 @@ use crate::spec::{cvs, Cc, LinkerFlavor, Lld, PanicStrategy, RelocModel, TargetO
 
 pub fn opts() -> TargetOptions {
     TargetOptions {
-        os: "unikraft".into(),
+        os: "linux".into(),
         families: cvs!["unix"],
         env: "musl".into(),
         linker_flavor: LinkerFlavor::Gnu(Cc::Yes, Lld::No),

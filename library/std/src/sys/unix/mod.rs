@@ -94,7 +94,7 @@ pub unsafe fn init(argc: isize, argv: *const *const u8, sigpipe: u8) {
             target_os = "horizon",
             target_os = "vita",
             // TODO: https://github.com/unikraft/lib-musl/issues/58
-            target_os = "unikraft",
+            target_os = "linux",
         )))]
         'poll: {
             use crate::sys::os::errno;
@@ -171,7 +171,7 @@ pub unsafe fn init(argc: isize, argv: *const *const u8, sigpipe: u8) {
             target_os = "fuchsia",
             target_os = "horizon",
             // TODO: https://github.com/unikraft/lib-musl/issues/57
-            target_os = "unikraft"
+            target_os = "linux"
         )))]
         {
             // We don't want to add this as a public type to std, nor do we
