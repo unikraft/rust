@@ -104,7 +104,7 @@ pub struct Command {
     stdin: Option<Stdio>,
     stdout: Option<Stdio>,
     stderr: Option<Stdio>,
-    #[cfg(any(target_os = "linux", target_os = "unikraft"))]
+    #[cfg(target_os = "linux")]
     create_pidfd: bool,
     pgroup: Option<pid_t>,
 }
@@ -176,7 +176,7 @@ impl ProgramKind {
 }
 
 impl Command {
-    #[cfg(not(any(target_os = "linux", target_os = "unikraft")))]
+    #[cfg(not(target_os = "linux"))]
     pub fn new(program: &OsStr) -> Command {
         let mut saw_nul = false;
         let program_kind = ProgramKind::new(program.as_ref());
@@ -200,7 +200,7 @@ impl Command {
         }
     }
 
-    #[cfg(any(target_os = "linux", target_os = "unikraft"))]
+    #[cfg(target_os = "linux")]
     pub fn new(program: &OsStr) -> Command {
         let mut saw_nul = false;
         let program_kind = ProgramKind::new(program.as_ref());
@@ -261,7 +261,7 @@ impl Command {
         self.pgroup = Some(pgroup);
     }
 
-    #[cfg(any(target_os = "linux", target_os = "unikraft"))]
+    #[cfg(target_os = "linux")]
     pub fn create_pidfd(&mut self, val: bool) {
         self.create_pidfd = val;
     }

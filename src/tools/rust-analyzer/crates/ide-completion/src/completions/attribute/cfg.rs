@@ -84,7 +84,6 @@ const KNOWN_OS: [&str; 20] = [
     "redox",
     "solaris",
     "uefi",
-    "unikraft",
     "unknown",
     "vxworks",
     "windows",

@@ -153,5 +153,5 @@ pub(crate) mod watchos;
 #[cfg(any(unix, target_os = "wasi", doc))]
 pub mod fd;
 
-#[cfg(any(target_os = "linux", target_os = "android", target_os = "unikraft", doc))]
+#[cfg(any(target_os = "linux", target_os = "android", doc))]
 mod net;

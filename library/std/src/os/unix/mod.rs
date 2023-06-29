@@ -75,8 +75,6 @@ mod platform {
     pub use crate::os::solaris::*;
     #[cfg(target_os = "tvos")]
     pub use crate::os::tvos::*;
-    #[cfg(target_os = "unikraft")]
-    pub use crate::os::unikraft::*;
     #[cfg(target_os = "vita")]
     pub use crate::os::vita::*;
     #[cfg(target_os = "vxworks")]

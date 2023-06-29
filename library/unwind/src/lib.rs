@@ -30,7 +30,6 @@ cfg_if::cfg_if! {
         // - os=none ("bare metal" targets)
         // - os=hermit
         // - os=uefi
-        // - os=unikraft
         // - os=cuda
         // - nvptx64-nvidia-cuda
         // - Any new targets not listed above.

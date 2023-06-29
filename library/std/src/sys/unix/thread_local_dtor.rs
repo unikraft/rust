@@ -14,8 +14,7 @@
 #[cfg(any(
     target_os = "linux",
     target_os = "fuchsia",
-    target_os = "redox",
-    target_os = "unikraft"
+    target_os = "redox"
 ))]
 pub unsafe fn register_dtor(t: *mut u8, dtor: unsafe extern "C" fn(*mut u8)) {
     use crate::mem;

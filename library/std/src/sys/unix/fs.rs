@@ -66,12 +66,11 @@ use libc::fstatat64;
 use libc::readdir as readdir64;
 #[cfg(target_os = "linux")]
 use libc::readdir64;
-#[cfg(any(target_os = "emscripten", target_os = "l4re", target_os = "unikraft"))]
+#[cfg(any(target_os = "emscripten", target_os = "l4re"))]
 use libc::readdir64_r;
 #[cfg(not(any(
     target_os = "android",
     target_os = "linux",
-    target_os = "unikraft",
     target_os = "emscripten",
     target_os = "solaris",
     target_os = "illumos",
@@ -89,7 +88,6 @@ use libc::{
 };
 #[cfg(not(any(
     target_os = "linux",
-    target_os = "unikraft",
     target_os = "emscripten",
     target_os = "l4re",
     target_os = "android"
@@ -101,8 +99,7 @@ use libc::{
 #[cfg(any(
     target_os = "linux",
     target_os = "emscripten",
-    target_os = "l4re",
-    target_os = "unikraft"
+    target_os = "l4re"
 ))]
 use libc::{dirent64, fstat64, ftruncate64, lseek64, lstat64, off64_t, open64, stat64};
 
@@ -909,7 +906,6 @@ impl DirEntry {
         target_os = "tvos",
         target_os = "watchos",
         target_os = "linux",
-        target_os = "unikraft",
         target_os = "emscripten",
         target_os = "android",
         target_os = "solaris",
